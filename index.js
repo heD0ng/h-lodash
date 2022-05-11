@@ -25,6 +25,17 @@ function has(obj, key){
     return hasOwnProperty.call(obj, key)
 }
 
+function tagTester(name){
+    let tag = '[object' + name + ']';
 
-let a = undefined;
-console.log(isUndefined(a))
+    return (obj)=>{
+        return Object.prototype.toString.call(obj) === tag;
+    }
+}
+
+function isArray(arr){
+    return Array.isArray(arr) || tagTester('Array')(arr);
+}
+
+let a = [undefined, 1, 3];
+console.log(isArray(a))

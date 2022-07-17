@@ -36,6 +36,3 @@ function tagTester(name){
 function isArray(arr){
     return Array.isArray(arr) || tagTester('Array')(arr);
 }
-
-let a = [undefined, 1, 3];
-console.log(isArray(a))

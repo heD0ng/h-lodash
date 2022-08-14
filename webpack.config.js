@@ -11,7 +11,7 @@ module.exports = {
     // 打包文件夹
     path: path.resolve(__dirname, 'dist'),
     // 打包文件
-    filename: 'atguigu-utils.js', 
+    filename: 'hd-utils.js', 
     // 向外暴露的对象的名称
     library: 'utils',
     // 打包生成库可以通过esm/commonjs/reqirejs的语法引入

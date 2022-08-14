@@ -1,8 +1,8 @@
 {
-  "name": "mine-own-util",
-  "version": "1.0.1",
+  "name": "h-underscorejs",
+  "version": "1.0.0",
   "description": "",
-  "main": "./dist/atguigu-utils.js",
+  "main": "./dist/hd-utils.js",
   "directories": {
     "test": "test"
   },
@@ -11,7 +11,6 @@
      "build:watch": "webpack --watch"
   },
   "keywords": [
-    "atguigu",
     "utils",
     "array",
     "object",

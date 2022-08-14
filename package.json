@@ -1,6 +1,6 @@
 {
   "name": "h-underscorejs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "./dist/hd-utils.js",
   "directories": {

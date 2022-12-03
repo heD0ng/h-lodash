@@ -10,6 +10,7 @@ export function sleep1(delay, fn){
     }
 }
 
+// 卡住进程；
 function sleep2(delay) {
     for(let t = Date.now(); Date.now() - t <= delay; ){
         

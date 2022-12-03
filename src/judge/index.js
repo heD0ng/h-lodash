@@ -1,4 +1,4 @@
-function isObject(obj){
+export function isObject(obj){
     let type = typeof obj
 
     return obj && (type === 'function' || type === 'object')
@@ -22,7 +22,7 @@ function isTextNode(node){
 }
 
 function has(obj, key){
-    return hasOwnProperty.call(obj, key)
+    return hasOwnProperty.call(obj, key);
 }
 
 function tagTester(name){
@@ -35,4 +35,13 @@ function tagTester(name){
 
 function isArray(arr){
     return Array.isArray(arr) || tagTester('Array')(arr);
+}
+
+
+function isEqual(val, oldVal) {
+    return val === oldVal;
+}
+
+export function isString(val) {
+    return typeof val === 'string';
 }

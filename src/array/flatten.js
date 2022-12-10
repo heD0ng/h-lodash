@@ -28,10 +28,28 @@ function flatten2(arr){
     //循环判断
     while(result.some(item => Array.isArray(item))){
         // [1,2,[3,4,[5,6]],7]
-        // result = [].concat(1,2,[3,4,[5,6]],7);// [1,2,3,4,[5,6],7]
-        // result = [].concat(1,2,3,4,[5,6],7);// [1,2,3,4,5,6,7]
         result = [].concat(...result);//
     }
     //返回结果
     return result;
+}
+
+const flat3 = (arr, n = 1) => {
+    // 需要深克隆一份;
+    if(n <= 0) return arr;
+    if(n === Infinity) {
+        return arr.slice(0).toString().split(',').map((item) => Number(item) || undefined);
+    }
+    const res = [];
+    const fn = (data, n) => {
+        data.reduce((p,c) => {
+            if(Array.isArray(c) && n > 0) {
+                fn(c, n - 1);
+            } else {
+                res.push(item);
+            }
+        }, res)
+    }
+    fn(arr, n);
+    return res;
 }

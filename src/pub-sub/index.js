@@ -52,7 +52,7 @@ PubSub.publish = function(channel, data){
 //   2). 传入token字符串
 //   3). msgName字符串
 PubSub.unsubscribe = function(flag){
-    //如果flag为undeined 则清空所有订阅
+    //如果flag为undefine 则清空所有订阅
     if(flag === undefined) {
         this.callbacks = {};
     }else if(typeof flag === 'string'){

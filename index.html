@@ -7,6 +7,16 @@
     <title>H-underscoreJs</title>
 </head>
 <body>
-    <script src="./index.js"></script>
+    <script src="./src/index.js"></script>
+    <script>
+        const p1 = new MyPromise((resolve, reject) => {
+            resolve(111);
+        })
+        p1.then((res) => {
+            console.log(res);
+        }, err => {
+            console.log(err);
+        })
+    </script>
 </body>
 </html>

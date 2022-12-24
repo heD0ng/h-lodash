@@ -1,5 +1,6 @@
 {
   "name": "h-underscorejs",
+  "type": "module",
   "version": "1.0.1",
   "description": "",
   "main": "./dist/hd-utils.js",

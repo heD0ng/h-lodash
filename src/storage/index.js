@@ -1,4 +1,4 @@
-import {isObject, isString} from '../judge';
+import { isObject, isString } from '../judge';
 export const ls = {};
 
 const localStorage = window.localStorage;

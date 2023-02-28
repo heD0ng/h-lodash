@@ -14,8 +14,3 @@ export function call(obj, ...args){
     //返回结果
     return result;
 }
-
-/**
- * 使用示例
- * fn.apply(obj, 1, 2, 3)
- */

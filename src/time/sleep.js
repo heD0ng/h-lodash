@@ -1,17 +1,5 @@
-export function sleep1(delay, fn){
-    if(typeof fn !== 'function'){
-        throw new Error(`it should be a function`)
-    }
-    return function(...arg){
-        let t = setTimeout(()=>{
-            fn.apply(this, ...arg)
-            t = null;
-        }, delay)
-    }
-}
-
 // 卡住进程；
-function sleep2(delay) {
+function sleep(delay) {
     for(let t = Date.now(); Date.now() - t <= delay; ){
         
     }

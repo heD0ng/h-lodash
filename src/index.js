@@ -54,11 +54,6 @@ export {
 }
 from './array/unique';
 
-//axios发送 AJAX 请求
-export {
-    axios
-}
-from './axios/index';
 
 //事件委托
 export {
@@ -96,12 +91,7 @@ from './function/throttle';
 
 //对象相关
 export {
-    clone1,
-    clone2,
-    deepClone1,
-    deepClone2,
-    deepClone3,
-    deepClone4
+    cloneDeep
 }
 from './object/clone';
 export {

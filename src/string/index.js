@@ -1,4 +1,4 @@
-
+// 翻转字符串
 export function reverseString(str){
     //将字符串转为数组
     let arr = [...str];
@@ -8,13 +8,13 @@ export function reverseString(str){
     let s = arr.join('');
     return s;
 }
+
 // 回文串
 export function palindrome(str){
     return reverseString(str) === str;
 }
+
 // 截断
 export function truncate(str, size){
     return str.slice(0, size) + '...';
 }
-
-localStorage

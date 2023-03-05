@@ -7,16 +7,26 @@
     <title>H-underscoreJs</title>
 </head>
 <body>
-    <script src="./src/index.js"></script>
+    <!-- <script src="./src/index.js"></script> -->
     <script>
-        const p1 = new MyPromise((resolve, reject) => {
-            resolve(111);
-        })
-        p1.then((res) => {
-            console.log(res);
-        }, err => {
-            console.log(err);
-        })
+        // const p1 = new MyPromise((resolve, reject) => {
+        //     resolve(111);
+        // })
+        // p1.then((res) => {
+        //     console.log(res);
+        // }, err => {
+        //     console.log(err);
+        // })
+        function myMap(cb) {
+            const arr = this;
+            return arr.reduce((p, c, i) => {
+                p.push(cb(c, i));
+                return p;
+            }, [])
+        }
+        Array.prototype.myMap = myMap;
+        const arr = [1,2,3];
+        console.log(arr.myMap((c, i) => 2*c))
     </script>
 </body>
 </html>

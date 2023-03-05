@@ -1,9 +1,9 @@
-export function cloneDeep(target, map=new Map()){
+export function cloneDeep(target, map = new Map()) {
     //检测数据的类型
-    if(typeof target === 'object' && target !== null ){
+    if (typeof target === 'object' && target !== null) {
         //克隆数据之前, 进行判断, 数据之前是否克隆过
         let cache = map.get(target);
-        if(cache){
+        if (cache) {
             return cache;
         }
         //判断目标数据的类型
@@ -13,19 +13,19 @@ export function cloneDeep(target, map=new Map()){
         //将新的结果存入到容器中
         map.set(target, result);
         //如果目标数据为数组
-        if(isArray){
+        if (isArray) {
             //forEach 遍历
             target.forEach((item, index) => {
                 result[index] = deepClone4(item, map);
             });
-        }else{
+        } else {
             //如果是对象, 获取所有的键名, 然后 forEach 遍历
             Object.keys(target).forEach(key => {
                 result[key] = deepClone4(target[key], map);
             });
         }
         return result;
-    }else{
+    } else {
         return target;
     }
 }

@@ -1,13 +1,13 @@
-function attempt(fn, ...arg){
+function attempt(fn, ...arg) {
     let count = 0
     try {
         fn(...arg)
     } catch (error) {
-        if(count>=3){
+        if (count >= 3) {
             throw new Error(error)
         }
         count++
-        setTimeout(()=> {
+        setTimeout(() => {
             attempt(fn, ...arg)
         }, 1000)
         throw new Error(error)

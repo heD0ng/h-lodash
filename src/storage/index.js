@@ -16,7 +16,7 @@ ls.set = (key, val) => {
         console.error('ls.set() need a string as key!')
     }
     try {
-        if(isObject(val)) {
+        if (isObject(val)) {
             localStorage.setItem(key, JSON.stringify(val));
         } else {
             localStorage.setItem(key, val);
@@ -29,4 +29,8 @@ ls.set = (key, val) => {
 
 ls.clear = (key) => {
     localStorage.clear(key);
+}
+
+ls.remove = (key) => {
+    localStorage.removeItem(key);
 }

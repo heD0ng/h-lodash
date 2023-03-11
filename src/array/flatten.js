@@ -1,4 +1,3 @@
-
 const flat = (arr, n = 1) => {
     // 需要深克隆一份;
     if(n <= 0) return arr;
